@@ -14,10 +14,8 @@ class Results : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results)
 
-//        val total_calories = intent.getStringExtra("totalcal")
-//        size.text = "$total_calories"
-        val total_calories = findViewById<TextView>(R.id.Total)
-        findViewById<TextView>(R.id.size).text = "$total_calories"
+        val total_calories = intent.getStringExtra("totalcal")
+        size.text = "$total_calories"
 
         val gender = intent.getStringExtra("gender")
         if(gender=="male" || gender == "Male") {

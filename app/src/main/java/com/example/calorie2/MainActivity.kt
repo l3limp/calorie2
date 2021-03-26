@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity(), ItemAdapter.OnItemClickListener {
         }
         results_page.setOnClickListener{
             val intent : Intent = Intent(this@MainActivity, Results::class.java)
-//            intent.putExtra("totalcal", total)
             startActivity(intent)
         }
 
@@ -35,6 +34,7 @@ class MainActivity : AppCompatActivity(), ItemAdapter.OnItemClickListener {
     override fun onItemClick(position: Int) {
         total += itemsList[position].calories
         findViewById<TextView>(R.id.Total).text = total.toString()
+        intent.putExtra("totalcal", total)
     }
 
 
