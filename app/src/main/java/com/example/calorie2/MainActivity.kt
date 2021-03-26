@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity(), ItemAdapter.OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         total_count  = findViewById(R.id.Total)
+        val gender = intent.getStringExtra("gender")
+        val age = intent.getStringExtra("age")
 
         clear_button.setOnClickListener{
             findViewById<TextView>(R.id.Total).text = "0"
@@ -27,7 +29,10 @@ class MainActivity : AppCompatActivity(), ItemAdapter.OnItemClickListener {
         results_page.setOnClickListener{
             val totalCount: String = total_count.text.toString()
             val intent : Intent = Intent(this@MainActivity, Results::class.java)
+
             intent.putExtra("totalcal",totalCount)
+            intent.putExtra("ages",age)
+            intent.putExtra("genders",gender)
             startActivity(intent)
 
         }
