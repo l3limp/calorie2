@@ -42,7 +42,7 @@ class MainActivity2 : AppCompatActivity() {
                     val intent : Intent = Intent(this@MainActivity2, MainActivity::class.java)
                     intent.putExtra("username", username)
                     intent.putExtra("age", age)
-                    intent.putExtra("gender", age)
+                    intent.putExtra("gender", gender)
                     startActivity(intent)
                 }
             }
