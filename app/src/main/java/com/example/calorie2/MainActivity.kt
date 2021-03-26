@@ -2,20 +2,34 @@ package com.example.calorie2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import org.w3c.dom.Text
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ItemAdapter.OnItemClickListener {
 
     private val itemsList = ArrayList<Item>()
+    var total : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        clear_button.setOnClickListener{
+            findViewById<TextView>(R.id.Total).text = "0"
+            total = 0
+        }
+
         setupData()
         initRV()
     }
+    override fun onItemClick(position: Int) {
+        total += itemsList[position].calories
+        findViewById<TextView>(R.id.Total).text = total.toString()
+    }
+
 
         private fun setupData(){
             val item1 = Item("Milk", R.drawable.milk, 22 , "Add 50ml")
@@ -49,22 +63,9 @@ class MainActivity : AppCompatActivity() {
 
         private fun initRV(){
             itemRecyclerView.layoutManager = LinearLayoutManager(this)
-            val mAdapter = ItemAdapter(this, itemsList)
+            val mAdapter = ItemAdapter(this, itemsList, this)
             itemRecyclerView.adapter = mAdapter
             mAdapter.notifyDataSetChanged()
         }
-
-
-//    override fun onItemClick(items: Item) {
-//
-//        var count = findViewById<TextView>(R.id.Total)
-//        var calCount = 0
-//
-//        calCount+= items.calories
-//
-//        count.text = calCount.toString()
-//        Toast.makeText(this, calCount , Toast.LENGTH_SHORT).show()
-//    }
-
 
 }
