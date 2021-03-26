@@ -26,66 +26,67 @@ class Results : AppCompatActivity() {
         val age = intent.getStringExtra("ages")
         val gender = intent.getStringExtra("genders")
 
-        if (gender.equals("male") || gender.equals( "Male")) {
+        if (gender.equals("male") || gender.equals("Male")) {
 
             if (age != null) {
                 if (age.toInt() <= 3 && age.toInt() > 0) {
                     if (totalCal.toInt() >= 900 && totalCal.toInt() <= 1100)
-                        resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
+                        resStatement.text =
+                            "The calorific value of your dish is within optimal limits, Enjoy your meal!"
                     else
-                        resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
+                        resStatement.text =
+                            "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
 
-                    if (age.toInt() <= 8) {
-                        if (totalCal.toInt() >= 1400 && totalCal.toInt() <= 1600)
-                            resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
-                        else
-                            resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
+                } else if (age.toInt() > 3 && age.toInt() <= 8) {
+                    if (totalCal.toInt() >= 1400 && totalCal.toInt() <= 1600)
+                        resStatement.text =
+                            "The calorific value of your dish is within optimal limits, Enjoy your meal!"
+                    else
+                        resStatement.text =
+                            "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
 
-                    } else if (age.toInt() <= 13) {
-                        if (totalCal.toInt() >= 1800 && totalCal.toInt() <= 2200)
-                            resStatement.text =
-                                "The calorific value of your dish is within optimal limits, Enjoy your meal!"
-                        else
-                            resStatement.text =
-                                "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                    }
-                    if (age.toInt() <= 18) {
-                        if (totalCal.toInt() >= 2400 && totalCal.toInt() <= 2800)
-                            resStatement.text =
-                                "The calorific value of your dish is within optimal limits, Enjoy your meal!"
-                        else
-                            resStatement.text =
-                                "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
+                } else if (age.toInt() > 8 && age.toInt() <= 13) {
+                    if (totalCal.toInt() >= 1800 && totalCal.toInt() <= 2200)
+                        resStatement.text =
+                            "The calorific value of your dish is within optimal limits, Enjoy your meal!"
+                    else
+                        resStatement.text =
+                            "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
+                } else if (age.toInt() > 13 && age.toInt() <= 18) {
+                    if (totalCal.toInt() >= 2400 && totalCal.toInt() <= 2800)
+                        resStatement.text =
+                            "The calorific value of your dish is within optimal limits, Enjoy your meal!"
+                    else
+                        resStatement.text =
+                            "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
 
-                        if (age.toInt() <= 30) {
-                            if (totalCal.toInt() >= 2600 && totalCal.toInt() <= 2800)
-                                resStatement.text =
-                                    "The calorific value of your dish is within optimal limits, Enjoy your meal!"
-                            else
-                                resStatement.text =
-                                    "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                            if (age.toInt() <= 50) {
-                                if (totalCal.toInt() >= 2400 && totalCal.toInt() <= 2600)
-                                    resStatement.text =
-                                        "The calorific value of your dish is within optimal limits, Enjoy your meal!"
-                                else
-                                    resStatement.text =
-                                        "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                            } else if (age.toInt() >= 51) {
-                                if (totalCal.toInt() >= 2200 && totalCal.toInt() <= 2400)
-                                    resStatement.text =
-                                        "The calorific value of your dish is within optimal limits, Enjoy your meal!"
-                                else
-                                    resStatement.text =
-                                        "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                            } else
-                                resStatement.text =
-                                    "Sorry! We do not have any data about the optimal calorific intake for your age. We may add it in future updates."
-                        }
-                    }
-                }
+                } else if (age.toInt() > 18 && age.toInt() <= 30) {
+                    if (totalCal.toInt() >= 2600 && totalCal.toInt() <= 2800)
+                        resStatement.text =
+                            "The calorific value of your dish is within optimal limits, Enjoy your meal!"
+                    else
+                        resStatement.text =
+                            "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
+                } else if (age.toInt() > 30 && age.toInt() <= 50) {
+                    if (totalCal.toInt() >= 2400 && totalCal.toInt() <= 2600)
+                        resStatement.text =
+                            "The calorific value of your dish is within optimal limits, Enjoy your meal!"
+                    else
+                        resStatement.text =
+                            "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
+                } else if (age.toInt() > 50 && age.toInt() >= 51) {
+                    if (totalCal.toInt() >= 2200 && totalCal.toInt() <= 2400)
+                        resStatement.text =
+                            "The calorific value of your dish is within optimal limits, Enjoy your meal!"
+                    else
+                        resStatement.text =
+                            "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
+                } else
+                    resStatement.text =
+                        "Sorry! We do not have any data about the optimal calorific intake for your age. We may add it in future updates."
             }
         }
+
 
         else if(gender.equals("Female")|| gender.equals("female")){
             if (age != null) {
@@ -94,37 +95,39 @@ class Results : AppCompatActivity() {
                         resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
                     else
                         resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                } else if(age.toInt() <=8){
+                }
+                else if(age.toInt() > 3 && age.toInt() <=8){
                     if(totalCal.toInt()>=1400 && totalCal.toInt()<=1600)
                         resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
                     else
                         resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
 
-                } else if(age.toInt() <=13){
+                }
+                else if(age.toInt() > 8 && age.toInt() <=13){
                     if(totalCal.toInt()>=1600 && totalCal.toInt()<=2000)
                         resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
                     else
                         result_statement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                } else if(age.toInt() <=18){
+                }
+                else if(age.toInt() > 13 &&age.toInt() <=18){
                     if(totalCal.toInt() >= 2000 && totalCal.toInt() <= 2400)
                         resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
                     else
                         resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                } else if(age.toInt() <=30){
+                }
+                else if(age.toInt() > 18 &&age.toInt() <=30){
                     if(totalCal.toInt() >= 2000 && totalCal.toInt() <= 2200)
                         resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
                     else
                         resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                } else if(age.toInt() <=50){
+                }
+                else if(age.toInt() > 30 &&age.toInt() <=50){
                     if(totalCal.toInt() >= 2000 && totalCal.toInt() <= 2200)
                         resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
                     else
                         resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"} else if( age.toInt() >=51){
-                    if(totalCal.toInt() >= 1800 && totalCal.toInt() <= 2000)
-                        resStatement.text = "The calorific value of your dish is within optimal limits, Enjoy your meal!"
-                    else
-                        resStatement.text = "The calorific value of your dish is not within optimal limits. We recommend you to consider revising your ingredients or their quatities"
-                } else
+                                    }
+                else
                     resStatement.text = "Sorry! We do not have any data about the optimal calorific intake for your age. We may add it in future updates."
             }
         }
