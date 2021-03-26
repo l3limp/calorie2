@@ -27,7 +27,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/architects_daughter"
+        android:fontFamily="@font/poppins_bold"
         android:text="HEALTHIFY 360"
         android:textColor="#364C36"
         android:textSize="48sp"
