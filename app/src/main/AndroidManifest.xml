@@ -9,7 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Calorie2">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".Results"
+            android:label="Results"
+            android:theme="@style/Theme.Calorie2.NoActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="MainActivity"
+            android:theme="@style/Theme.Calorie2.NoActionBar" />
+        <activity
+            android:name=".MainActivity2"
+            android:label="MainActivity2"
+            android:theme="@style/Theme.Calorie2.NoActionBar" />
+        <activity android:name=".HomeSc">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

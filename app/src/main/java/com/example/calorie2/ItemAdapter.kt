@@ -51,11 +51,6 @@ class ItemAdapter(
         override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
             holder.bindView(images[position])
 
-//            holder.itemView.setOnClickListener{
-//                itemView.Total.text += images[position].calories.toString()
-//                calCount += images[position].calories
-//                Toast.makeText(context, calCount.toString(), Toast.LENGTH_SHORT).show()
-//            }
 
         }
 

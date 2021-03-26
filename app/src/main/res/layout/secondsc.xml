@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#8F1414" />
+        app:rippleColor="#8F1414"
+        />
 
     <TextView
         android:id="@+id/Intro1"
@@ -27,14 +28,15 @@
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Welcome Onboard!"
-        android:textSize="24sp"
+        android:textSize="32sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.194"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/intro_subheading"
@@ -70,8 +72,8 @@
         android:layout_marginTop="48dp"
         android:background="@drawable/rectangle"
         android:ems="10"
-        android:hint="    Please enter your name"
-
+        android:hint="Please enter your name"
+        android:textAlignment="center"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,11 +86,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
+        android:textAlignment="center"
         android:ems="10"
-        android:hint="    Age"
+        android:hint="Age"
         android:inputType="textPersonName"
-
-
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,15 +98,17 @@
         app:layout_constraintTop_toBottomOf="@+id/PersonName"
         app:layout_constraintVertical_bias="0.078" />
 
+
     <EditText
         android:id="@+id/Gender"
+        android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/rectangle"
         android:ems="10"
-        android:hint="    Gender"
+        android:hint="Gender"
 
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
