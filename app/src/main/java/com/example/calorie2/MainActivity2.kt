@@ -38,12 +38,15 @@ class MainActivity2 : AppCompatActivity() {
                 gender.isEmpty() -> {
                     Toast.makeText(this, "Enter Your Gender", Toast.LENGTH_SHORT).show()
                 }
-                else -> {
+                gender.equals("male") || gender.equals("Male")|| gender.equals("female")|| gender.equals("Female") -> {
                     val intent : Intent = Intent(this@MainActivity2, MainActivity::class.java)
                     intent.putExtra("username", username)
                     intent.putExtra("age", age)
                     intent.putExtra("gender", gender)
                     startActivity(intent)
+                }
+                else -> {
+                    Toast.makeText(this, "Invalid gender entered. Please enter male/female", Toast.LENGTH_SHORT).show()
                 }
             }
         }
